@@ -1,0 +1,11 @@
+const form = document.querySelector('form');
+const input = document.querySelector('input');
+const list = document.querySelector('ul');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const newItem = document.createElement('li');
+  newItem.textContent = input.value;
+  list.appendChild(newItem);
+  input.value = '';
+});
